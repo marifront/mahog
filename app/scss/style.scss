@@ -1,0 +1,924 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+body {
+    padding-top: 80px;
+}
+
+.header {
+    color: $black;
+    position: fixed;
+    height: 80px;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 20;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+
+
+    .menu__list-link {
+        @extend %cofo-medium;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        color: $black;
+        transition: .4s all;
+
+        &:hover {
+            color: $red;
+            transition: .4s all;
+        }
+    }
+
+
+
+    .logo__wrap-img {
+        margin-right: 31px;
+    }
+
+    .logo__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo__link {
+            color: $black;
+        }
+
+    }
+
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__wrapper {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+
+
+    .logo__text-title {
+        @extend %cofo-regular;
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 293px;
+        font-weight: 400;
+        font-family: 'CoFo Sans Regular';
+    }
+
+}
+
+.header .menu__list {
+    display: flex;
+
+
+    .menu__list-item {
+        border-left: 1px solid #E2E2E2;
+        min-width: 131px;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+            border-right: 1px solid #E2E2E2;
+        }
+    }
+
+
+}
+
+.intro {
+
+    background: url(../images/intro-bg-2560.jpg);
+    background-repeat: no-repeat;
+    min-height: 656px;
+    background-size: cover;
+    background-position: top center;
+}
+
+// date
+
+.date__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 52px 0 48px;
+}
+
+.date {
+    color: $black;
+    background: #F8F8F8;
+
+    &__item {
+        max-width: 380px;
+        margin-top: 9px;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 50px;
+        @extend %cofo-medium;
+        margin-bottom: 16px;
+    }
+
+    &__descr {
+        @extend %cofo-regular;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+}
+
+// timer
+
+.date__count {
+    background: #fff;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(85, 85, 85, 0.1);
+    border-radius: 5px;
+    padding: 28px 39px 28px 50px;
+    width: 680px;
+
+}
+
+.countdown {
+    text-transform: uppercase;
+    @extend %cofo-medium;
+    display: flex;
+    justify-content: space-between;
+}
+
+.countdown>div {
+    display: block;
+}
+
+.countdown>div>span {
+    display: block;
+    text-align: center;
+}
+
+.countdown-container .countdown-heading {
+    color: #1A252C;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+}
+
+.countdown-container .countdown-value,
+.count-item {
+    font-size: 54px;
+    color: $red;
+    position: relative;
+
+}
+
+.countdown-container:last-of-type {
+    .countdown-value {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.about-award {
+    background: #fff;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 100vw;
+        top: 398px;
+        right: 0;
+        height: 1px;
+        background-color: #E2E2E2;
+    }
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        width: 100vw;
+        right: 0;
+        height: 1px;
+        background-color: #E2E2E2;
+    }
+
+
+
+    p {
+        margin-bottom: 8px;
+    }
+
+    &__info {
+        max-width: 777px;
+        padding-top: 60px;
+    }
+
+    &__title {
+        @extend %cofo-medium;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 19px;
+    }
+
+    &__descr {
+        @extend %cofo-regular;
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 59px;
+    }
+
+    &__year-start {
+        @extend %cofo-medium;
+        font-size: 96px;
+        line-height: 100px;
+        color: $red;
+        letter-spacing: 0.02em;
+
+    }
+
+    &__year-text {
+        @extend %cofo-regular;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+
+}
+
+.about-award__inner {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.about-award__year {
+    border-left: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+
+
+
+}
+
+
+.about-award__year-inner {
+    border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
+    margin: 0 -1px;
+    margin-top: 95px;
+    position: relative;
+}
+
+.about-award__wrap {
+    padding: 28px 37px 38px 38px;
+}
+
+.about-award__year-items--top {
+    position: absolute;
+    top: -8px;
+    width: 100%;
+
+    &:after,
+    &:before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/mark.png);
+        background-repeat: no-repeat;
+
+    }
+
+    &:after {
+        top: 0;
+        left: -8px;
+    }
+
+    &:before {
+        top: 0;
+        right: -8px;
+    }
+}
+
+.about-award__year-items--bottom {
+    position: absolute;
+    bottom: -8px;
+    width: 100%;
+
+    &:after,
+    &:before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/mark.png);
+        background-repeat: no-repeat;
+    }
+
+    &:after {
+        bottom: 0;
+        left: -8px;
+    }
+
+    &:before {
+        bottom: 0;
+        right: -8px;
+    }
+
+}
+
+
+
+.about-award__item-circle {
+    background: $red;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+}
+
+.about-award__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 71px;
+    padding-bottom: 60px;
+
+}
+
+
+
+.about-award__items .about-award__item:first-child {
+    @extend %cofo-medium;
+    font-size: 80px;
+    line-height: 60px;
+
+
+    .about-award__item-circle {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 76px;
+            height: 52px;
+            background: #fff;
+            background-image: url(../images/about-award-trophy-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 4px;
+            bottom: -6px;
+        }
+    }
+
+    .about-award__item-circle-wrap {
+        padding-top: 48px;
+        letter-spacing: 0.05em;
+
+    }
+}
+
+.about-award__items .about-award__item:nth-child(3) {
+
+    .about-award__item-circle {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 30px;
+            background: #fff;
+            background-image: url(../images/about-award-live-item.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 4px;
+            bottom: -6px;
+        }
+    }
+
+
+    .about-award__item-circle-wrap {
+        padding-top: 28px;
+    }
+
+    .about-award__item-date {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 73px;
+            height: 1px;
+            bottom: -6px;
+            background: #fff;
+        }
+
+        div:first-child {
+            @extend %cofo-medium;
+            font-size: 58px;
+            line-height: 48px;
+        }
+
+        div:nth-child(2) {
+            @extend %cofo-medium;
+            font-size: 22px;
+            line-height: 26px;
+            position: relative;
+            margin-bottom: 7px;
+        }
+
+    }
+
+    .about-award__item-time {
+        @extend %cofo-medium;
+        font-size: 25px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+        display: flex;
+        justify-content: center;
+        padding-top: 7px;
+    }
+}
+
+.about-award__item-circle--img {
+    background: none;
+}
+
+.about-award__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about-award__item-text {
+    @extend %cofo-regular;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+// nominations
+
+.nominations__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.nominations {
+    background-color: #F8F8F8;
+
+    &__title {
+        font-size: 40px;
+        line-height: 48px;
+        @extend %cofo-medium;
+        color: #1A252C;
+        margin-bottom: 32px;
+    }
+
+    &__cards {
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid #E2E2E2;
+        border-left: 1px solid #E2E2E2;
+
+    }
+
+    &__card {
+
+
+        @extend %cofo-regular;
+        font-size: 18px;
+        line-height: 28px;
+        color: #1A252C;
+        min-height: 170px;
+        position: relative;
+        display: block;
+
+
+        &:hover {
+            .nominations__card-bottom {
+                // bottom: 0;
+                // height: 45px;
+                transition: 0.1s visibility;
+                visibility: visible;
+            }
+        }
+
+    }
+
+    &__card:nth-child(n+2) {
+        line-height: 24px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        padding: 39px;
+        width: calc(25% + 1px);
+        border: 1px solid #E2E2E2;
+        margin-top: -1px;
+        margin-left: -1px;
+        counter-increment: list;
+
+        &:hover {
+            position: relative;
+            z-index: 5;
+            border-color: $red;
+        }
+
+        .nominations__card-number {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            border-right: 1px solid #E2E2E2;
+            border-bottom: 1px solid #E2E2E2;
+            left: -1px;
+            top: -1px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+            @extend %cofo-medium;
+            font-size: 16px;
+            line-height: 28px;
+            color: $red;
+
+            &:after {
+                content: "";
+                display: inline-block;
+                content: counter(list);
+            }
+        }
+
+
+    }
+}
+
+
+.nominations__card:nth-child(n+5):after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/nominations-mark-icon.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+
+}
+
+.nominations__card:nth-child(4n):after {
+    display: none;
+}
+
+
+
+.nominations__cards .nominations__card:first-child {
+
+    padding: 27px 65px 29px 38px;
+    max-width: 50%;
+
+    margin-bottom: -1px;
+}
+
+.arrow {
+    display: flex;
+    margin-left: 16px;
+    background: url(../images/arrow-icon.png);
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-color: $red;
+    background-position: center center;
+
+}
+
+.nominations__card-link {
+    display: flex;
+    align-items: center;
+}
+
+.nominations__card-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $red;
+    font-size: 13px;
+    line-height: 20px;
+    @extend %cofo-medium;
+    transition: 0.1s visibility;
+    visibility: hidden;
+
+}
+
+// contacts
+.contacts__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 116px;
+    padding-top: 81px;
+
+    .contacts__descr {
+        font-size: 40px;
+        line-height: 50px;
+        @extend %cofo-bold;
+        color: #1A252C;
+        max-width: 580px;
+        padding-top: 25px;
+
+        span {
+            color: $red;
+        }
+    }
+}
+
+.contacts__items {
+    display: flex;
+}
+
+.contacts__items .contacts__item:first-child {
+    .contacts__item-card-text {
+        font-size: 30px;
+        line-height: 32px;
+        @extend %cofo-medium;
+        position: relative;
+        margin-left: 21px;
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 6px;
+            left: -40px;
+            background: url(../images/contacts-arrow-icon.svg);
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+}
+
+.contacts__item {
+    margin-left: 20px;
+
+}
+
+.contacts__item-card {
+    width: 280px;
+    height: 200px;
+    border: 1px solid #E2E2E2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    transition: .4s all;
+
+    &:hover {
+        border: 1px solid $red;
+        transition: .4s all;
+    }
+}
+
+.contacts__item-text {
+    font-size: 20px;
+    line-height: 28px;
+    @extend %cofo-regular;
+    text-align: center;
+
+}
+
+// footer
+.footer {
+    background: #F8F8F8;
+
+
+}
+
+.sticky {
+    // position: sticky;
+    position: fixed;
+    z-index: 200;
+    height: 148px;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    padding: 23px 0;
+
+}
+
+.footer__wrap {
+    display: flex;
+}
+
+.footer__copy {
+    display: flex;
+    align-items: center;
+    margin-right: 36px;
+}
+
+.footer__copy,
+.footer__info-text a {
+
+    @extend %cofo-regular;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.footer__socials {
+    display: flex;
+    width: calc(100% - 370px);
+
+    li+li {
+        margin-left: 24px;
+    }
+
+    a {
+        border-radius: 50%;
+        transition: .4s all;
+
+        &:hover {
+            svg path {
+                fill: $red;
+                transition: .4s all;
+            }
+        }
+    }
+}
+
+.footer__info-text a {
+    color: #1A252C;
+}
+
+.intro__img-tablet,
+.intro__img-mobile {
+    display: none;
+}
+
+
+.burger-mobile {
+    background: none;
+    border: none;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    padding: 12px;
+    right: -4px;
+    top: 15px;
+    outline: none;
+    display: none;
+}
+
+
+
+.burger-mobile .burger__item:before,
+.burger-mobile .burger__item:after {
+    content: "";
+    width: 37px;
+    height: 3px;
+    position: absolute;
+    left: -8px;
+    z-index: 10;
+    background-color: inherit;
+    background: #777777;
+    transition: .2s all;
+}
+
+.burger-mobile .burger__item:before {
+    top: -13px;
+}
+
+.burger-mobile .burger__item:after {
+    bottom: -13px;
+}
+
+
+
+.burger-mobile .burger__item {
+    display: block;
+    width: 28px;
+    height: 3px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    color: transparent;
+    background: #777777;
+    position: relative;
+    border-radius: 5px;
+    z-index: 10;
+
+}
+
+.burger-mobile.open .burger__item:before {
+    top: 0;
+    transform: rotate(45deg);
+    transition: .2s all;
+}
+
+.burger-mobile.open .burger__item:after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: .2s all;
+}
+
+.burger-mobile.open .burger__item {
+    background: transparent;
+    outline: none;
+    width: 23px;
+
+}
+
+
+.mobile {
+
+    display: none;
+}
+
+.mobile.open {
+
+    .mobile__menu-wrap {
+        padding: 24px 0px;
+        transition: .4s opacity;
+        overflow-y: auto;
+        height: 100%;
+        min-height: 100%;
+
+        padding-bottom: 148px;
+
+    }
+
+    display: block;
+
+    position: fixed;
+    top: 72px;
+    left: 0;
+    z-index: 9;
+    overflow-y: auto;
+    width: 100%;
+    height: calc(100% - 72px);
+    background-color: #fff;
+
+
+    .mobile__menu {
+        li {
+            padding: 24px 30px;
+            border-top: 1px solid #E2E2E2;
+
+        }
+
+        a {
+            font-size: 18px;
+            line-height: 22px;
+            @extend %cofo-regular;
+            color: #1A252C;
+        }
+    }
+}
+
+.mobile__menu-title {
+    @extend %cofo-medium;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+@import 'media';
